@@ -21,6 +21,8 @@ To create `KeyValues` instance **from VDF file**:
 kv = KeyValues(filename="")
 ```
 
+Now you can access KeyValues with `dict` interface, i.e. with `kv[key] = value` operations.
+
 When you create `KeyValues` instance from VDF file you can specify these optional parameters:
 
 * `encoding=""` - input VDF file encoding. Default: `utf-8`
@@ -33,10 +35,10 @@ To create `KeyValues` instance **from your own object with `dict` interface** (a
 kv = KeyValues(mapper=)
 ```
 
-All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()` (or `print(kv)`, which is in fact shortcut for `print(kv.dump())`). For example you can use `key_sorter=sorted` and keys will be represented in alphabetical order; `key_sorter=reversed` for reverse order. Instance's attribute. Default: `None`
+All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()` (or `print(kv)`, which is in fact shortcut for `print(kv.dump())`). For example you can use `key_sorter=sorted` and keys will be represented in alphabetical ascending order; `key_sorter=reversed` for reverse order. Instance's attribute. Default: `None`
 
 ### Methods
-* `parse(filename)` - parses the VDF file to `dict` interface representation, i.e. KeyValues can be accessed and modified by `mapper[key] = value` operations. Optional arguments:
+* `parse(filename)` - parses the VDF file to `dict` interface representation, i.e. KeyValues can be accessed and modified by `kv[key] = value` operations. Optional arguments:
   * `encoding=""` - input VDF file encoding. Default: `utf-8`
   * `mapper_type=` - [see Instantiation section](README.md#instantiation). This will override the instance's attribute `mapper_type`. Default: `collections.OrderedDict` (stores the keys in the order they have been added)
   * `key_modifier=` - [see Instantiation section](README.md#instantiation). This will override the instance's attribute `key_modifier`. Default: `None`
@@ -61,3 +63,7 @@ Of course the class KeyValues also provides the standard `dict` interface method
 *example_02.py* - using the optional functions
 
 *example_03.py* - "advanced" uses
+
+# What is missing
+
+Generally the checking of VDF file syntax, i.e. if brackets are closed and so on. The only check is if after `"key"` is a starting bracket `{`.
