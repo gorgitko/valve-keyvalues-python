@@ -27,7 +27,7 @@ When you create `KeyValues` instance from VDF file you can specify these optiona
 
 * `encoding=""` - input VDF file encoding. Default: `utf-8`
 * `mapper_type=` - mapper type for storing KeyValues. It must have the `dict` interface, i.e. allow to do `mapper[key] = value` operations. For example you can use the `dict` type. **Instance's attribute**. Default: `collections.OrderedDict` (stores the keys in the order they have been added)
-* `key_modifier=` - functions for modifying the key before its additions. For example `key_modifier=str.lower` will make all the keys to be lowercase. **Instance's attribute**. Default: `None`
+* `key_modifier=` - function for modifying the key before its addition. For example `key_modifier=str.lower` will make all the keys to be lowercase. **Instance's attribute**. Default: `None`
 
 To create `KeyValues` instance **from your own object with `dict` interface**:
 
