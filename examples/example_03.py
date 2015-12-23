@@ -10,7 +10,9 @@ def key_modifier(key):
 def reverse_sorter(keys):
     return sorted(keys, reverse=True)
 
+# empty KeyValues instance
 kv = KeyValues()
+# we fill it with KeyValues from file
 kv.parse(filename_vdf)
 print(kv)
 
