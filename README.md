@@ -33,7 +33,7 @@ To create `KeyValues` instance **from your own object with `dict` interface** (a
 kv = KeyValues(mapper=)
 ```
 
-All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()`. For example you can use `key_sorter=sorted` and keys will be represented in alphabetical order; `key_sorter=reversed` for reverse order. Instance's attribute. Default: `None`
+All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()` (or `print(kv)`, which is in fact shortcut for `print(kv.dump())`). For example you can use `key_sorter=sorted` and keys will be represented in alphabetical order; `key_sorter=reversed` for reverse order. Instance's attribute. Default: `None`
 
 ### Methods
 * `parse(filename)` - parses the VDF file to `dict` interface representation, i.e. KeyValues can be accessed and modified by `mapper[key] = value` operations. Optional arguments:
