@@ -2,7 +2,7 @@
 Python class for manipulation with Valve KeyValues files ([VDF format](https://developer.valvesoftware.com/wiki/KeyValues)). Provides the parsing of VDF files to objects with dict interface, editing of this object keys and values and writing of any object with dict interface to VDF file.
 
 # Installation
-Just copy the `valve-keyvalues-python` folder wherever you need, for example to your Python's site-packages: `<Python>/Lib/site-packages/` and then inside your program import the class by `from valve-keyvalues-python import KeyValues`
+Just copy the `valve_keyvalues_python` folder or `keyvalues.py` file wherever you need, for example to your Python's site-packages: `<Python>/Lib/site-packages/` and then inside your program import the class by `from valve_keyvalues_python.keyvalues import KeyValues` or `from keyvalues import KeyValues`
 
 **Requires Python 3!**
 
