@@ -20,7 +20,7 @@ print(kv)
 kv.parse(filename_vdf, key_modifier=key_modifier)
 print(kv)
 
-# print sorted alphabetically descending
+# print keys sorted alphabetically descending
 print(kv.dump(key_sorter=reverse_sorter))
 
 # print keys reversed
