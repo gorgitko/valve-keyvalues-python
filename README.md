@@ -68,7 +68,7 @@ Of course the class KeyValues also provides the standard `dict` interface method
 
 # What is missing
 
-Generally the checking of VDF file syntax, i.e. if brackets are closed and so on. The only check is if after `"key"` is a starting bracket `{`. So it's expected that input VDF file will have a 'clean' structure:
+Generally the checking of VDF file syntax, i.e. if brackets are closed and so on. The only check is if after `"key"` is a starting bracket `{`. So it's expected that input VDF file will have a 'clean' and valid structure:
 
 * one key or key-value per line, if value isn't subpart:
 ```
