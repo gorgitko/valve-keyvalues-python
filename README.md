@@ -68,4 +68,37 @@ Of course the class KeyValues also provides the standard `dict` interface method
 
 # What is missing
 
-Generally the checking of VDF file syntax, i.e. if brackets are closed and so on. The only check is if after `"key"` is a starting bracket `{`.
+Generally the checking of VDF file syntax, i.e. if brackets are closed and so on. The only check is if after `"key"` is a starting bracket `{`. So it's expected that input VDF file will have a 'clean' structure:
+
+* one key or key-value per line, if value isn't subpart:
+```
+"key" "value"
+```
+* values can be on two lines (I have to implement this because Valve do it sometimes in their VDF files):
+```
+"key" "val
+ue"
+```
+* when value is a  subpart, starting bracket `{` is expected to be on separate line after the corresponding key:
+```
+"key"
+{
+  "key2" "value"
+}
+```
+* everything that doesn't match key or key-value regex or if line doesn't start with `{` or `}` is ignored. So this is ok:
+```
+"key"
+// some comment
+{
+  "key2" "value"
+}
+```
+* even this should be ok, but don't do it, because Valve itself won't probably parse it :)
+```
+"key"
+some comment
+{ comment
+  "key2" "value" comment
+} comment
+```
