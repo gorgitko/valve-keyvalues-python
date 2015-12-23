@@ -26,16 +26,18 @@ Now you can access KeyValues with `dict` interface, i.e. with `kv[key] = value` 
 When you create `KeyValues` instance from VDF file you can specify these optional parameters:
 
 * `encoding=""` - input VDF file encoding. Default: `utf-8`
-* `mapper_type=` - mapper type for storing KeyValues. It must have the `dict` interface, i.e. allow to do `mapper[key] = value` operations. For example you can use the `dict` type. Instance's attribute. Default: `collections.OrderedDict` (stores the keys in the order they have been added)
-* `key_modifier=` - functions for modifying the key before its additions. For example `key_modifier=str.lower` will make all the keys to be lowercase. Instance's attribute. Default: `None`
+* `mapper_type=` - mapper type for storing KeyValues. It must have the `dict` interface, i.e. allow to do `mapper[key] = value` operations. For example you can use the `dict` type. **Instance's attribute**. Default: `collections.OrderedDict` (stores the keys in the order they have been added)
+* `key_modifier=` - functions for modifying the key before its additions. For example `key_modifier=str.lower` will make all the keys to be lowercase. **Instance's attribute**. Default: `None`
 
-To create `KeyValues` instance **from your own object with `dict` interface** (and instance's attribute `mapper_type` will be set to type of passed `mapper=` object):
+To create `KeyValues` instance **from your own object with `dict` interface**:
 
 ```python
 kv = KeyValues(mapper=)
 ```
 
-All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()` (or `print(kv)`, which is in fact shortcut for `print(kv.dump())`). For example you can use `key_sorter=sorted` and keys will be represented in alphabetical ascending order; `key_sorter=reversed` for reverse order. Instance's attribute. Default: `None`
+Instance's attribute `mapper_type` will be set to type of passed `mapper=` object.
+
+All these instantiation variants have common optional parameter `key_sorter=`. It's a sorting function which will be applied to keys when you use methods `dump()` or `write()` (or `print(kv)`, which is in fact shortcut for `print(kv.dump())`). For example you can use `key_sorter=sorted` and keys will be represented in alphabetical ascending order; `key_sorter=reversed` for reverse order. **Instance's attribute**. Default: `None`
 
 ### Methods
 * `parse(filename)` - parses the VDF file to `dict` interface representation, i.e. KeyValues can be accessed and modified by `kv[key] = value` operations. Optional arguments:
