@@ -1,0 +1,12 @@
+"zZzZ" "I want to be the last."
+"second"
+{
+    "second_THIRD"  "second_third value"
+    "SECOND_second"
+    {
+        "second_second_first"   "second_second_first value"
+    }
+    "second_first"  "second_first value"
+}
+"Third" "third value"
+"First" "first value"

@@ -1,0 +1,11 @@
+"first" "first value"
+"second"
+{
+    "second_first"  "second_first value"
+    "second_second"
+    {
+        "second_second_first"   "second_second_first value"
+    }
+    "second_third"  "second_third value"
+}
+"third" "third value"
