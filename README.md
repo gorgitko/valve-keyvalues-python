@@ -44,7 +44,7 @@ All these instantiation variants have common optional parameter `key_sorter=`. I
   * `key_modifier=` - [see Instantiation section](README.md#instantiation). This will override the instance's attribute `key_modifier`. Default: `None`
  
 * `dump()` - returns the string representation of stored KeyValues, i.e. string in correct VDF format. Optional parameters:
-  * `mapper=` - dumps the passed object (it must have the `dict` interface!). Default: `None`
+  * `mapper=` - passed object will be dumped (it must have the `dict` interface!). Default: `None`
   * `key_sorter=` - [see Instantiation section](README.md#instantiation). This will override the instance's attribute `key_sorter`. Default: `None`
 
 * `write(filename)` - writes the dump to file. Optional parameters:
