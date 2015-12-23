@@ -2,7 +2,7 @@
 
 from valve_keyvalues_python.keyvalues import KeyValues
 
-filename_vdf = "example_02.vdf"
+filename_vdf = "example_03.vdf"
 
 def key_modifier(key):
     return key.lower() + "_modified"
