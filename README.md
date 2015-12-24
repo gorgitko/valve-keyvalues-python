@@ -102,3 +102,8 @@ some comment
   "key2" "value" comment
 } comment
 ```
+
+# TODO
+
+* checking of valid VDF syntax
+* support for SourceMod Config (SMC) files - they seem to be the same as VDF, but supposedly not
