@@ -41,7 +41,7 @@ class KeyValues(dict):
             return
 
         if type(filename) == str:
-            self.parse(filename)
+            self.parse(filename, encoding=encoding)
         else:
             raise Exception("'filename' argument must be string!")
 
